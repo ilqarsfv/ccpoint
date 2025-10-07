@@ -1,3 +1,15 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 #headerContent > img {
   height: 100%;
   object-fit: cover;
@@ -31,7 +43,7 @@
   margin-bottom: 0px;
 }
 
-#headerContent > a {
+#headerContent > button {
   padding: 12px 36px;
   border-radius: 14px;
   background: #fff;
@@ -40,12 +52,22 @@
   color: var(--primary-purple);
   font-size: 1.25rem;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
 }
-
-#headerContent > a > span {
+.fa-building {
+  color: #fff !important;
+}
+#headerContent > button > span {
   background: var(--primary-purple);
   padding: 1px 12px;
   border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #calcTop h1 {
@@ -513,7 +535,6 @@
   box-shadow: inset 0 -6px 14px rgba(0, 0, 0, 0.12), 8px 8px 16px rgba(0, 0, 0, 0.08);
 }
 
-
 @media (max-width: 640px) {
   #rules .header {
     flex-direction: column;
@@ -521,81 +542,77 @@
   }
 }
 .ac-item.open .ac-panel {
-    grid-template-rows: 1fr;
+  grid-template-rows: 1fr;
 }
 
 /* footer */
 footer {
-    padding: 40px 0px;
-    background-color: #eeeeee39;
+  padding: 40px 0px;
+  background-color: #eeeeee39;
 }
 #footerWrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 #footerLeft {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 #footerRight {
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 #footerRight ul {
-    list-style: none;
-    padding: 0px;
-    margin-top: 15px;
+  list-style: none;
+  padding: 0px;
+  margin-top: 15px;
 }
 #footerRight ul li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 #footerRight ul a {
-    text-decoration: none;
-    color: #222;
-    font-weight: 400;
-    transition: all .3s ease-in-out;
+  text-decoration: none;
+  color: #222;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
 }
 #footerRight ul a:hover {
-    color: var(--accent);
+  color: var(--accent);
 }
 #ftLeTitle,
 #footerRight span {
-    color: var(--accent) !important;
-    font-size: 1.25rem;
-    font-weight: bold;
+  color: var(--accent) !important;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 #footerPartnersWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
-#footerPartnersWrapper>div {
-    width: 23%;
-    height: 70px;
-    padding: 10px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px #2222;
-    border-radius: 8px;
+#createdWebsite {
+  display: inline-block;
+  width: 100%;
 }
-#footerPartnersWrapper>div img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+#createdWebsite img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 #ftLeCopy {
-    color: #fefefe;
-    font-size: 13px;
-    margin-top: 30px;
+  color: #fefefe;
+  font-size: 13px;
+  margin-top: 30px;
 }
 #footerSocials {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .exchange-block {
   all: unset;
@@ -620,7 +637,7 @@ footer {
 }
 .input-group input {
   padding: 16px 24px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   border: none !important;
   border-radius: 12px !important;
 }
@@ -672,4 +689,73 @@ footer {
 #rate-text strong {
   display: block;
   margin-top: 10px;
+}
+.contentBox a {
+  text-decoration: none;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#myModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0005;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hidden {
+  display: none !important;
+}
+.modalContent {
+  width: 600px;
+  padding: 30px;
+  border-radius: 8px;
+  background: #fff;
+}
+#modalContentTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--accent);
+}
+.modalContent h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+#modalContentTop svg {
+  cursor: pointer;
+}
+#modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 25px;
+}
+#modalForm input,
+#modalForm textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  resize: none;
+}
+#modalForm textarea {
+  min-height: 250px;
+}
+#modalForm button {
+  background: var(--accent);
+  padding-block: 15px;
+  margin-top: 15px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+  border: none;
 }

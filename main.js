@@ -194,7 +194,7 @@ function init() {
   });
 
   var myMap2 = new ymaps.Map("map2", {
-    center: [59.935800, 30.325875],
+    center: [59.9358, 30.325875],
     zoom: 15,
   });
 
@@ -213,7 +213,7 @@ function init() {
   );
   myMap2.geoObjects.add(
     new ymaps.Placemark(
-      [59.935800, 30.325875],
+      [59.9358, 30.325875],
       {},
       {
         iconLayout: "default#image",
@@ -226,17 +226,37 @@ function init() {
   );
 }
 
-
 /* Accordion – tək-açıq davranış (Ctrl basılıdırsa çoxlu açıq qala bilər) */
-document.querySelectorAll('.ac-trigger').forEach(btn => {
-  btn.addEventListener('click', e => {
-    const item = btn.closest('.ac-item');
-    const isOpen = item.classList.contains('open');
+document.querySelectorAll(".ac-trigger").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const item = btn.closest(".ac-item");
+    const isOpen = item.classList.contains("open");
 
     // digər açılmışları bağla
-    document.querySelectorAll('.ac-item.open').forEach(i => i.classList.remove('open'));
+    document.querySelectorAll(".ac-item.open").forEach((i) => i.classList.remove("open"));
 
     // kliklənəni aç
-    if (!isOpen) item.classList.add('open');
+    if (!isOpen) item.classList.add("open");
   });
+});
+
+document.querySelectorAll(".closeModal, #getModal").forEach((el) => {
+  el.addEventListener("click", () => {
+    document.querySelector("#myModal").classList.toggle("hidden");
+    console.log(1)
+  });
+});
+
+document.querySelector("#myModal").addEventListener("click", (e) => {
+  if (!e.target.closest(".modalContent")) {
+    e.currentTarget.classList.add("hidden");
+  }
+});
+
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".dropdown") && !e.target.closest(".dropdownMenu")) {
+    document.querySelectorAll(".dropdown").forEach((el) => {
+      el.classList.remove("active");
+    });
+  }
 });
