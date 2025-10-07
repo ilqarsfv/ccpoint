@@ -101,7 +101,7 @@ input[type="number"] {
 
 .countrySelect {
   position: relative;
-  width: 30%;
+  width: 45%;
 }
 
 .countrySelect select {
@@ -690,6 +690,7 @@ footer {
   display: block;
   margin-top: 10px;
 }
+<<<<<<< HEAD
 .contentBox a {
   text-decoration: none;
   color: #000;
@@ -759,3 +760,5 @@ footer {
   transition: all 0.3s ease-in-out;
   border: none;
 }
+=======
+>>>>>>> cf71a38b356977991e7377b47fa303061968ef80
