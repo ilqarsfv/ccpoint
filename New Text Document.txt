@@ -1,0 +1,2 @@
+ssh root@85.198.83.143
+d^Ae6ZWZRyUin2
