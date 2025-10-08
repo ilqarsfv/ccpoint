@@ -327,10 +327,15 @@ input[type="number"] {
   font-size: 14px;
   margin-top: 15px;
 }
-.mapContent .contentBox > div {
+.mapContent .contentBox > div,
+.mapContent .contentBox > a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+}
+.mapContent .contentBox > a {
+  color: #000;
+  text-decoration: none;
 }
 .mapContent .contentBox span {
   display: grid;
