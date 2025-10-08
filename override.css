@@ -355,6 +355,7 @@ input[type="number"] {
   width: 40%;
   height: 500px;
   overflow: hidden;
+  border-radius: 12px;
 }
 #leftMapPhoto img {
   width: 100%;
@@ -695,8 +696,7 @@ footer {
   display: block;
   margin-top: 10px;
 }
-<<<<<<< HEAD
-.contentBox a {
+<<<<<<< HEAD .contentBox a {
   text-decoration: none;
   color: #000;
   display: flex;
@@ -765,5 +765,145 @@ footer {
   transition: all 0.3s ease-in-out;
   border: none;
 }
-=======
->>>>>>> cf71a38b356977991e7377b47fa303061968ef80
+#main-div {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+}
+#main-button {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  font-size: 20px;
+  color: #0064f3;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid #012e64 !important;
+}
+#main-button,
+#main-button ~ a,
+#main-button ~ button,
+.oxo-action-block:before {
+  position: absolute;
+  bottom: 0;
+}
+#main-button,
+#main-button ~ a,
+#main-button ~ button {
+  right: 0;
+  height: 50px;
+  cursor: pointer;
+}
+#main-button,
+.btn {
+  align-items: center;
+}
+
+.open {
+  animation-iteration-count: 1;
+}
+.wave {
+  animation-name: wave;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes wave {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+}
+
+#main-button ~ button {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  visibility: hidden;
+  font-weight: 600;
+  padding: 0 20px;
+  color: #fff;
+  background: linear-gradient(90deg, #00a1f5, #0064f3);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border: 0;
+  z-index: -1;
+  opacity: 0;
+  white-space: nowrap;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+#main-button.open ~ button {
+  visibility: visible;
+  z-index: 100;
+  right: 70px;
+  opacity: 1;
+  transition: 0.4s cubic-bezier(0, 0.01, 0, 1.27);
+  -webkit-transition: 0.4s cubic-bezier(0, 0.01, 0, 1.27);
+  -moz-transition: 0.4s cubic-bezier(0, 0.01, 0, 1.27);
+  -ms-transition: 0.4s cubic-bezier(0, 0.01, 0, 1.27);
+  -o-transition: 0.4s cubic-bezier(0, 0.01, 0, 1.27);
+}
+#main-button.open ~ a:first-of-type {
+  bottom: 60px;
+}
+#main-button.open ~ a {
+  opacity: 1;
+  transition: 0.4s cubic-bezier(0, 0.01, 0, 1.27);
+  -webkit-transition: 0.4s cubic-bezier(0, 0.01, 0, 1.27);
+  -moz-transition: 0.4s cubic-bezier(0, 0.01, 0, 1.27);
+  -ms-transition: 0.4s cubic-bezier(0, 0.01, 0, 1.27);
+  -o-transition: 0.4s cubic-bezier(0, 0.01, 0, 1.27);
+}
+#main-button ~ .telegram-color {
+  background: linear-gradient(0deg, #017ab1, #01abe6);
+}
+#main-button ~ a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  width: 50px;
+  font-size: 20px;
+  opacity: 0;
+  text-decoration: none;
+  color: #fff;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+}
+#main-button.open ~ a:nth-of-type(2) {
+  bottom: 120px;
+}
+#main-button ~ .whatsapp-color {
+  background: linear-gradient(0deg, #00b100, #09db09);
+}
+#main-button.open ~ a:nth-of-type(3) {
+  bottom: 180px;
+}
+#main-button ~ .messenger-color {
+  background: linear-gradient(0deg, #0078ff, #00c6ff);
+}

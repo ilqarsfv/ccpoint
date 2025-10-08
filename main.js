@@ -240,7 +240,7 @@ document.querySelectorAll(".ac-trigger").forEach((btn) => {
   });
 });
 
-document.querySelectorAll(".closeModal, #getModal").forEach((el) => {
+document.querySelectorAll(".closeModal, #getModal,#getModalTwo").forEach((el) => {
   el.addEventListener("click", () => {
     document.querySelector("#myModal").classList.toggle("hidden");
     console.log(1)
@@ -259,4 +259,10 @@ document.addEventListener("click", (e) => {
       el.classList.remove("active");
     });
   }
+});
+
+let mainDiv = document.getElementById('main-button');
+mainDiv.addEventListener('click', function(){
+  this.children.item(0).classList.toggle('fa-times');
+  this.classList.toggle('open');
 });
